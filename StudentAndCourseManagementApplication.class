@@ -1,0 +1,17 @@
+package com.example.Student.and.Course.Management;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+@SpringBootApplication(scanBasePackages = "com") // specify package name of controller classes
+@EntityScan(basePackages = "com.jsp.dto") // specify entity classes
+@EnableJpaRepositories(basePackages = "com.jsp.repository") // specify repositories .
+public class StudentAndCourseManagementApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(StudentAndCourseManagementApplication.class, args);
+	}
+
+}
